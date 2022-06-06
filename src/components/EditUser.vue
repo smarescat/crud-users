@@ -7,7 +7,7 @@
       hide-header
       no-close-on-backdrop
     >
-      <div>
+      <div class="mt-2">
         <b-form @submit.stop.prevent>
           <label for="name">Name</label>
           <b-form-input
@@ -21,7 +21,7 @@
           </b-form-invalid-feedback>
         </b-form>
       </div>
-      <div>
+      <div class="mt-2">
         <b-form @submit.stop.prevent>
           <label for="surnames">Surnames</label>
           <b-form-input
@@ -35,7 +35,7 @@
           </b-form-invalid-feedback>
         </b-form>
       </div>
-      <div>
+      <div class="mt-2">
         <b-form @submit.stop.prevent>
           <label for="email">Email</label>
           <b-form-input
@@ -45,7 +45,7 @@
           ></b-form-input>
         </b-form>
       </div>
-      <div>
+      <div class="mt-2">
         <label for="dateOfBirth">Date of Birthday</label>
         <b-form-datepicker
           v-model="userEdit.dateOfBirth"
