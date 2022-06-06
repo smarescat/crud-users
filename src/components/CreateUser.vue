@@ -105,6 +105,10 @@
           </b-button>
         </div>
       </template>
+      <label v-show="errorMessage" class="text-danger user-select-none mt-2">
+            <b-icon icon="info-circle" aria-hidden="true"></b-icon>
+             {{ errorMessage }} 
+          </label>
     </b-modal>
   </div>
 </template>
@@ -125,6 +129,7 @@ export default {
         dateOfBirth: "",
       },
       alertText: "",
+      errorMessage: '',
     };
   },
   computed: {
@@ -173,8 +178,8 @@ export default {
             this.$emit("refreshTable");
           }
         })
-        .catch(({ data }) => {
-          this.errorMessage = data;
+        .catch((error) => {
+          this.errorMessage = error.errorData;
         });
     },
     closeModal() {
