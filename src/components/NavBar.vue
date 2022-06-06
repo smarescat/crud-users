@@ -15,7 +15,7 @@
           <template #button-content>
             <em class="mr-2">{{ userLogged.name }}</em>
           </template>
-          <b-dropdown-item @click="logout"
+            <b-dropdown-item @click="logout"
             ><i class="fa-solid fa-right-from-bracket mr-2"></i>Sign
             out</b-dropdown-item
           >
@@ -51,5 +51,9 @@ export default {
 <style scoped>
 .dropdown-menu .show {
   right: 50px !important;
+}
+.position {
+  position: absolute;
+  right: 10px;
 }
 </style>
